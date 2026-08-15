@@ -1,0 +1,23 @@
+# 构建产物与本地工具链（不入库；tools/ 下的构建脚本需要入库，已移出）
+node_modules/
+node-portable/
+.cargo/
+.rustup/
+.mingw/
+.nsis/
+src-tauri/target/
+src-tauri/gen/
+target-gnu/
+release/
+dist/
+web-dist/
+pikafish-engine/
+.trae/
+
+# 临时文件
+.nsis.zip
+build-log.txt
+speedtest.toml
+speedtest-rsproxy.toml
+rustup-init.exe
+winget-rustup.log

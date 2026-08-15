@@ -1,0 +1,15 @@
+{
+  "name": "大布象棋",
+  "short_name": "大布象棋",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#fdf6f2",
+  "theme_color": "#f79ab6",
+  "description": "内置 Pikafish 引擎的中国象棋，支持离线对弈",
+  "icons": [
+    {"src":"icons/icon-192.png","sizes":"192x192","type":"image/png","purpose":"any"},
+    {"src":"icons/icon-512.png","sizes":"512x512","type":"image/png","purpose":"any"}
+  ]
+}
