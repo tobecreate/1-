@@ -1,11 +1,13 @@
 /* 中国象棋 · 雅弈 — Service Worker（PWA 离线缓存）
-   引擎 wasm/data 已内嵌在 index.html，无需额外缓存。 */
+   index.html 为外置引擎版（已剥离内嵌引擎），需预缓存 wasm/data。 */
 const CACHE_NAME='xiangqi-v1';
 const PRECACHE=[
   './',
   'index.html',
   'engineAdapter.js',
   'engine/pikafish.js',
+  'engine/pikafish.wasm',
+  'engine/pikafish.data',
   'worker/pikafish.worker.js',
   'manifest.webmanifest',
   'icons/icon-192.png',

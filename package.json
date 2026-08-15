@@ -1,32 +1,9 @@
 {
   "name": "xiangqi",
   "private": true,
-  "version": "0.0.1",
+  "version": "1.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "tsc && vite build",
-    "preview": "vite preview",
-    "sync:web": "set PATH=node-portable\\node-v20.15.0-win-x64;%PATH% && node tools/sync-web-dist.js",
-    "tauri:dev": "set PATH=node-portable\\node-v20.15.0-win-x64;%PATH% && npm run sync:web && tauri dev",
-    "tauri:build": "set PATH=node-portable\\node-v20.15.0-win-x64;%PATH% && npm run sync:web && tauri build"
-  },
-  "dependencies": {
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
-    "zustand": "^4.5.5"
-  },
-  "devDependencies": {
-    "@tauri-apps/cli": "^2.11.4",
-    "@types/react": "^18.3.3",
-    "@types/react-dom": "^18.3.0",
-    "@vitejs/plugin-react": "^4.3.1",
-    "autoprefixer": "^10.4.19",
-    "makensis": "^3.0.6",
-    "nsis": "^0.0.0",
-    "postcss": "^8.4.39",
-    "tailwindcss": "^3.4.6",
-    "typescript": "^5.5.3",
-    "vite": "^5.3.4"
+    "sync:web": "set PATH=node-portable\\node-v20.15.0-win-x64;%PATH% && node tools/sync-web-dist.js"
   }
 }

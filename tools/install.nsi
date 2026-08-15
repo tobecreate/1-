@@ -34,6 +34,15 @@ RequestExecutionLevel admin
 
 !insertmacro MUI_LANGUAGE "SimpChinese"
 
+; WebView2 运行时检测：缺失时提示
+Function .onInit
+  ReadRegStr $0 HKLM "SOFTWARE\WOW6432Node\Microsoft\EdgeUpdate\Clients\{F3017226-FE2A-4295-8BDF-00C3A9A7E4C5}" "pv"
+  StrCmp $0 "" 0 +5
+  MessageBox MB_YESNO|MB_ICONEXCLAMATION "未检测到 WebView2 运行时，大布象棋无法启动。$\r$\n是否立即打开官方下载页面？（Windows 10/11 一般已内置）" IDNO skip
+  ExecShell "open" "https://developer.microsoft.com/microsoft-edge/webview2/"
+  skip:
+FunctionEnd
+
 Section "安装" SEC01
   SetOutPath "$INSTDIR"
   File /oname=${APP_EXE} "${PROJECT}target-gnu\release\xiangqi.exe"

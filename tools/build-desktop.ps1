@@ -74,6 +74,14 @@ try {
   if (Test-Path $zip) { Remove-Item $zip -Force }
   Compress-Archive -Path $portDir -DestinationPath $zip -Force
 
+  # optional code signing: sign installer and portable exe when SIGN_PFX is set
+  if ($env:SIGN_PFX) {
+    Write-Host '[3.5/4] signing artifacts ...'
+    $setup = Get-ChildItem (Join-Path 'X:\dist' "$app-$azb") -Filter '*setup.exe' -ErrorAction SilentlyContinue | Select-Object -First 1
+    if ($setup) { & 'X:\tools\sign.ps1' -Path $setup.FullName }
+    if (Test-Path (Join-Path $portDir "$app.exe")) { & 'X:\tools\sign.ps1' -Path (Join-Path $portDir "$app.exe") }
+  }
+
   Write-Host '[4/4] done.'
   Write-Host ('  exe       : ' + $exe)
   Write-Host ('  portable  : ' + $zip)
