@@ -2,7 +2,7 @@
 name = "xiangqi"
 version = "1.0.0"
 description = "大布象棋"
-authors = ["大布象棋工作室"]
+authors = ["哥伦布"]
 edition = "2021"
 
 [lib]
