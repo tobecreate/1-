@@ -11,6 +11,7 @@ target-gnu/
 release/
 dist/
 web-dist/
+deploy/
 pikafish-engine/
 .trae/
 
