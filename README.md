@@ -8,8 +8,8 @@
 
 **Windows 桌面版**
 
-- **安装包（推荐）**：前往 [Releases 页面](https://github.com/tobecreate/1-/releases) 下载 `大布象棋_1.0.0_x64-setup.exe`，双击安装后开始菜单与桌面出现「大布象棋」快捷方式，自带卸载器。
-- **便携版（免安装）**：前往 [Releases 页面](https://github.com/tobecreate/1-/releases) 下载 `大布象棋-便携版.zip`，解压后双击「大布象棋.exe」即玩，可拷到任意位置。
+- **安装包（推荐）**：前往 [Releases 页面](https://github.com/tobecreate/1-/releases) 下载 `dabu-xiangqi-1.0.0-setup.exe`，双击安装后开始菜单与桌面出现「大布象棋」快捷方式，自带卸载器。
+- **便携版（免安装）**：前往 [Releases 页面](https://github.com/tobecreate/1-/releases) 下载 `dabu-xiangqi-1.0.0-portable.zip`，解压后双击「大布象棋.exe」即玩，可拷到任意位置。
 
 > 运行需系统装有 WebView2 运行时（Windows 10/11 自带）；旧系统可在安装时按提示下载。
 
