@@ -22,3 +22,7 @@ speedtest.toml
 speedtest-rsproxy.toml
 rustup-init.exe
 winget-rustup.log
+
+# 本机快捷方式与启动脚本（路径机器相关，不入库）
+大布象棋.lnk
+启动大布象棋.bat
