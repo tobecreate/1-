@@ -4,15 +4,22 @@
 
 > 开发者：哥伦布
 
-## 三种入口
+## 下载与使用
 
-1. **安装包（商用形态）**：`dist\大布象棋-安装包\大布象棋_1.0.0_x64-setup.exe`
-   双击安装后，开始菜单与桌面出现「大布象棋」快捷方式，带卸载器。
-2. **便携版（免安装）**：`dist\大布象棋-便携版\大布象棋.exe`
-   整个文件夹可拷到任意位置双击即玩；另附 `开始游戏.bat`。
-3. **根目录一键启动**：`启动大布象棋.bat`（指向便携版 exe）。
+**Windows 桌面版**
+
+- **安装包（推荐）**：前往 [Releases 页面](https://github.com/tobecreate/1-/releases) 下载 `大布象棋_1.0.0_x64-setup.exe`，双击安装后开始菜单与桌面出现「大布象棋」快捷方式，自带卸载器。
+- **便携版（免安装）**：前往 [Releases 页面](https://github.com/tobecreate/1-/releases) 下载 `大布象棋-便携版.zip`，解压后双击「大布象棋.exe」即玩，可拷到任意位置。
 
 > 运行需系统装有 WebView2 运行时（Windows 10/11 自带）；旧系统可在安装时按提示下载。
+
+**网页版（PWA）**
+
+- 本地运行 `npm run sync:web` 生成 `deploy/` 后，部署到任意 HTTPS 静态托管，即可在手机/电脑浏览器直接安装使用。
+
+**从源码本地构建桌面版**
+
+- 双击根目录 `build-desktop.bat`，自动生成 `dist\` 下的安装包与便携版（构建工具链已随项目内置，无需系统级安装）。
 
 ## 构建方法
 
@@ -24,15 +31,18 @@
 ## 目录结构
 
 ```
+【已入库】
 index.html            独立版游戏（内嵌引擎，双击 file:// 可玩）
 engine/  worker/       Pikafish 引擎文件（js/wasm/data + 工作线程）
 engineAdapter.js       引擎适配层（内嵌/外置双路径）
-web-dist/             Tauri 前端（构建产物，由 sync:web 生成）
-deploy/               PWA 部署目录（外置引擎版，由 sync:web 生成）
-dist/                 交付产物（安装包 + 便携版）
 src-tauri/            Tauri v2 桌面壳（Rust）
 tools/                构建脚本（sync-web-dist / build-desktop / sign / install.nsi）
 build-desktop.bat     桌面端一键构建入口
+
+【本地构建产物，未入库（由构建脚本生成）】
+web-dist/             Tauri 前端（npm run sync:web 生成）
+deploy/               PWA 部署目录（外置引擎版，npm run sync:web 生成）
+dist/                 交付产物（安装包 + 便携版，build-desktop.bat 生成）
 ```
 
 ## 环境说明
